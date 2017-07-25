@@ -46,3 +46,46 @@ int main()
     move(n,'A','B','C');
     return 0;
 }
+
+//分苹果问题 把m个苹果放在n个相同的盘子里，允许有的盘子空着不放，问共有多少种不同的分法
+//算法：若m<n,f(m,n)=f(m,m);若m>=n,分为二种情况（有盘子空着，没有盘子空着）（1）f(m,n)=f(m,n-1) （2）f(m,n)=f(m-n,n)
+#include <iostream>
+using namespace std;
+int f(int m,int n)
+{
+    if(m<=1||n<=1)
+        return 1;
+    if(m<n)
+        return f(m,m);
+    else
+        return f(m,n-1)+f(m-n,n);
+}
+int main()
+{
+    int apples,plates;
+    cin>>apples>>plates;
+    cout<<f(apples,plates)<<endl;
+    return 0;
+}
+
+//逆波兰表达式
+#include <iostream>
+using namespace std;
+double notation()
+{
+    char str[10];
+    cin>>str;
+    switch(str[0])
+    {
+        case'+':return notation()+notation();
+        case'-':return notation()-notation();
+        case'*':return notation()*notation();
+        case'/':return notation()/notation();
+        default:return atof(str);
+    }
+}
+int main()
+{
+    cout<<notation()<<endl;
+    return 0;
+}
