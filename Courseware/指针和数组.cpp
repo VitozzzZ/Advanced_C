@@ -47,6 +47,6 @@ int main()
     int (*p)[4],i,j;
     p=a;
     cin>>i>>j;
-    cout<<setw(4)<<*(*(p+i)+j);
+    cout<<setw(4)<<*(*(p+i)+j);//可用p[i][j]代替
     return 0;
 }
