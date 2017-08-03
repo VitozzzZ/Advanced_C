@@ -72,7 +72,6 @@ int main()
     cout<<"*a+1="<<*a+1<<endl;
     cout<<"a[0]+1="<<a[0]+1<<endl;
     cout<<"&a[0][0]+1="<<&a[0][0]+1<<endl<<endl;
-    
     return 0;
     
 }
