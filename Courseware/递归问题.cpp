@@ -1,3 +1,22 @@
+//一个逆向打印的递归程序
+#include<iostream>
+using namespace std;
+int recur()
+{
+    char c;
+    c=cin.get();
+    if(c!='\n')
+        recur();
+    cout<<c;
+    return 0;
+}
+int main()
+{
+    recur();
+    return 0;
+}
+
+
 //进制转换
 #include <iostream>
 using namespace std;
