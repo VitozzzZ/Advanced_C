@@ -17,7 +17,7 @@ int main() {
             if (a[i] >= 'a')
                 temp = a[i] - 32;
             else
-                temp = a[i];
+                temp = a[i];   //将字符串全转化成大写
             bool found = false;
             for (j = 0; j< l; j++) {
                 if (s[j].ch == temp) {
